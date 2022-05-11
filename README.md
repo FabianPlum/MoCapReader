@@ -2,7 +2,7 @@
 
 _Reading 3D motion capture data to animate meshes_
 
-<img src=images/mandible_comp.gif width="500" height="250">
+<img src=images/mandible_comp.gif height="250">
 
 # How to MCR
 
