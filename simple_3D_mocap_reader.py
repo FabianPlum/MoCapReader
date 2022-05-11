@@ -3,7 +3,7 @@ import bpy
 import csv
 import numpy as np
 
-mocap_file = "C:/Users/Legos/Documents/PhD/Blender/MoCap_Victor/04052022_ant22p4mg_closure1.csv"
+mocap_file = "PATH/TO/FILE.csv"
 
 coords = []
 
