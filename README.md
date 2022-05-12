@@ -2,7 +2,7 @@
 
 _Reading 3D motion capture data to animate meshes_
 
-<img src=images/mandible_comp.gif height="250">
+<img src=images/mandible_comp.gif width="500">
 
 # How to MCR
 
@@ -32,7 +32,7 @@ Double check the coordinate system of the imported coordinates in **line 44**. I
 
 <img src=images/3.JPG width="700">
 
-Once all is set up, hit **execute** (the right facing arrow on the top right above the loaded script. If everything worked according to plan, you should now see the imported keypoints as keyframed **empty** objects in the **3D viewport**
+Once all is set up, hit **execute** (the right facing arrow on the top right above the loaded script). If everything worked according to plan, you should now see the imported keypoints as keyframed **empty** objects in the **3D viewport**
 
 <img src=images/4_A.JPG width="400">
 
@@ -44,9 +44,9 @@ Now, head back to the **Layout** tab.
 
 <img src=images/5.JPG width="500">
 
-## Assign armature
+## Assign Armature
 
-We need to create an armature tied to the imported keypoints to anchor the mesh to them. The armature consists of **n - 1** bones, with **n** being the number of keypoints (and thus empties). We parent the base of the armature to one of the empty objects and have the extending bones span between all empties at a fixed length, tracking their location.
+We need to create an Armature tied to the imported keypoints to anchor the mesh to them. The Armature consists of **n - 1** bones, with **n** being the number of keypoints (and thus empties). We parent the base of the Armature to one of the empty objects and have the extending bones span between all empties at a fixed length, tracking their location.
 
 Begin by **snapping** the **cursor** to one of the empty objects. The order does not matter. However, you mustn't move any of the keyframes in the **Timeline**, or **Dope Sheet** and perform all the following actions while at **Frame 1**. 
 
@@ -54,11 +54,11 @@ Select the **empty** object, which will become our base, by **left clicking** it
 
 <img src=images/6.JPG width="600">
 
-Now create an armature at this point by pressing **shift + A** and selecting **armature** from the drop-down menu
+Now create an Armature at this point by pressing **shift + A** and selecting **Armature** from the drop-down menu
 
 <img src=images/7.JPG width="600">
 
-Next, switch to **Edit Mode** by pressing **tab**or selecting **Edit Mode** from the top left menu. To make moving the bone tip to an adjacent empty object easier, enable **Snap to Vertex** by clicking on the **magnet** symbol at the top of the viewport.
+Next, switch to **Edit Mode** by pressing **tab** or selecting **Edit Mode** from the top left menu. To make moving the bone tip to an adjacent empty object easier, enable **Snap to Vertex** by clicking on the **magnet** symbol at the top of the viewport.
 
 <img src=images/8.JPG width="600">
 
@@ -66,13 +66,13 @@ Select the **tip**, and ONLY the **tip**, of the bone and press **G** to move it
 
 <img src=images/9.JPG width="600">
 
-Now, create additional bones from the base of the original bone in the armature to connect to the remaining empty objects. Select the **base** of the bone and press **E** to extrude another bone. Move its tip to the desired empty and confirm your choice with the **left mouse button** again.
+Now, create additional bones from the base of the original bone in the Armature to connect to the remaining empty objects. Select the **base** of the bone and press **E** to extrude another bone. Move its tip to the desired empty and confirm your choice with the **left mouse button** again.
 
 <img src=images/10.JPG width="600">
 
-Switch back to **Object Mode** by selecting it from the top left drop-down menu. Now we parent the created armature to the empty located at its base. It is essential to follow the order of these steps to arrive at the desired hierarchy.
+Switch back to **Object Mode** by selecting it from the top left drop-down menu. Now we parent the created Armature to the empty located at its base. It is essential to follow the order of these steps to arrive at the desired hierarchy.
 
-1. **Left click** the armature
+1. **Left click** the Armature
 2. Hold **shift** and **Left click** the empty at the base
 3. Press **ctrl + P** and **Set parent to Object**
 
@@ -80,7 +80,7 @@ Switch back to **Object Mode** by selecting it from the top left drop-down menu.
 
 Now we assign **Bone constraints** to track the non-parented empty objects.
 
-To do so, having selected the armature, switch to **Pose Mode**. 
+To do so, having selected the Armature, switch to **Pose Mode**. 
 
 <img src=images/12.JPG width="600">
 
@@ -96,12 +96,12 @@ Select the other bone(s) and repeat the process until all bones have been assign
 
 <img src=images/15.JPG width="600">
 
-Apply the new armature configuration as the **default pose** to avoid deforming the **mesh** in the final step.
+Apply the new Armature configuration as the **default pose** to avoid deforming the **mesh** in the final step.
 While in **Pose Mode**, select **Pose** > **Apply** > **Apply Pose as Rest Pose**
 
 ## Importing and parenting the generated mesh
 
-Switch back to **Object Mode** and import the mesh you wish to assign to the armature. Simply select **File** > **Import** > **Wavefront (.obj)** or whichever format you used to export your mesh.
+Switch back to **Object Mode** and import the mesh you wish to assign to the Armature. Simply select **File** > **Import** > **Wavefront (.obj)** or whichever format you used to export your mesh.
 
 <img src=images/18.JPG width="600">
 <img src=images/19.JPG width="600">
@@ -126,10 +126,10 @@ Again, all changes are confirmed by pressing the **Left Mouse Button** or cancel
 
 <img src=images/21.JPG width="600">
 
-Once your mesh is in the desired position, lined up with its respective keypoints, all that is left to do is **parent** the mesh to the armature. The order is important:
+Once your mesh is in the desired position, lined up with its respective keypoints, all that is left to do is **parent** the mesh to the Armature. The order is important:
 
 1. **Left click** the mesh
-2. Hold **shift** and **Left click** the armature
+2. Hold **shift** and **Left click** the Armature
 3. Press **ctrl + P** and **Armature Deform** > **With Automatic Weights**
 
 <img src=images/22.JPG width="600">
