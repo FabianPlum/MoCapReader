@@ -4,7 +4,7 @@ _Reading 3D motion capture data to animate meshes_
 
 <img src=images/mandible_comp.gif width="500">
 
-# How to MCR
+# How to MCR 
 
 The process is relatively straightforward as soon as you know your way around Blender and pick up the two or three shortcuts.
 Just be sure to closely follow the steps below regarding the order in which elements need to be selected to assign the desired dependency.
